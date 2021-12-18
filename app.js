@@ -5,18 +5,24 @@
 //  -implement charts to display stats
 // Server-side:
 //  -setup authentication.
-//  -adjust local_data to be saved as an object every 5min and automatically be initialized on startup.
 const fs = require('fs');
 
 const readLastLines = require('read-last-lines');
 
-let local_data = {
-    host: [],
-    user_agent: [],
-    protocol: [],
-    resource: [],
-    coords: [],
-};
+let local_data = JSON.parse(fs.readFileSync("db.json"));
+
+// let local_data = {
+//     host: [],
+//     user_agent: [],
+//     protocol: [],
+//     resource: [],
+//     coords: [],
+// };
+
+//Save data to json file every 10min.
+setInterval(() => {
+  fs.writeFile("db.json", local_data);
+}, 600000);
 
 const express = require('express');
 const app = express();
