@@ -200,7 +200,9 @@ socket.on("catchup", (data) => {
     sorter(local_coords);
     console.log("catchup done, added: " + local_coords.length + " markers of total: " + data.coords.length + " locations");
 
-    local_coords.forEach((coords) => {
+    //Draw most common places last to better show them on the map.
+    let local_coords_reversed = local_coords.reverse();
+    local_coords_reversed.forEach((coords) => {
         addMarker(coords.lat, coords.lon, true);
     })
 
