@@ -2,6 +2,7 @@
 // Client-side:
 //  -update stats fields on every new connection.
 //  -setup login form and adjust socket connection to allow authentication.
+//  -implement charts to display stats
 // Server-side:
 //  -setup authentication.
 //  -adjust local_data to be saved as an object every 5min and automatically be initialized on startup.
