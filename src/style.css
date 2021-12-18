@@ -13,6 +13,7 @@ body {
     height: 100%;
     width: 100%;
     filter: invert(1) hue-rotate(180deg);
+    background-color: #f2efe9;
 }
 
 .info {
