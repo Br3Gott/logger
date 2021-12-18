@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logger</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <div class="popupContainer">
+    </div>
+    <div class="container">
+        <div id="mapdiv"></div>
+        <div class="info hidden">
+            <div class="header">
+                <h1>All Stats:</h1>
+                <h3>Sorted by most frequent occurence.</h3>
+            </div>
+                <div class="data">
+                    <h3>Hosts</h3>
+                    <div class="hosts">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="data">
+                    <h3>Protocol</h3>
+                    <div class="protocol">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="data">
+                    <h3>Resource</h3>
+                    <div class="resource">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="data">
+                    <h3>Country</h3>
+                    <div class="country">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </div>   
+                </div>
+                <div class="data">
+                    <h3>ISP</h3>
+                    <div class="isp">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="data">
+                    <h3>User Agent</h3>
+                    <div class="userAgent">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        <div class="navbar">
+            <div onclick="showMap()" class="mapbutton link selected">
+                <p>Map</p>
+            </div>
+            <div onclick="showStats()" class="statsbutton link">
+                <p>Stats</p>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="/src/script.js"></script>
+</body>
+
+</html>
